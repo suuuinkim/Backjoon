@@ -5,18 +5,15 @@ class Solution {
 
         Stack<Character> stack = new Stack<>();
         
-        for(char x : s.toCharArray()){
-            if(x == '(') stack.push(x);
+        for(char c : s.toCharArray()){
+            if(c == '(') stack.push(c);
             else{
-                if(stack.isEmpty()) return false;
-                stack.pop();
-            }
+                if(!stack.isEmpty()) stack.pop();
+                else stack.push(c);
+            }    
         }
         
-        if(!stack.isEmpty()) return false;
-        
-        
-
+        answer = stack.isEmpty() ? true : false;
         return answer;
     }
 }
