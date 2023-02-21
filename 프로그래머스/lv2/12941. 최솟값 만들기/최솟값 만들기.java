@@ -4,14 +4,17 @@ class Solution
     public int solution(int []A, int []B)
     {
         int answer = 0;
-
+        
         Arrays.sort(A);
         Arrays.sort(B);
+        //Integer[] arr = Arrays.stream(B).boxed().toArray(Integer[]::new);
+        //Arrays.sort(arr, Collections.reverseOrder());
         
-        int len = B.length;
-        for(int i=0; i<len; i++){
-            answer += A[i] * B[len-i-1];
+        for(int i=0; i<A.length; i++){
+            answer += A[i]*B[B.length - 1 -i];
         }
+        
+
         return answer;
     }
 }
