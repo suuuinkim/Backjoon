@@ -5,23 +5,22 @@ public class Solution {
         
         Stack<Integer> stack = new Stack<>();
         
-        for(int x : arr){
-            if(stack.isEmpty()){
-                stack.push(x);
+        for(int i=0; i<arr.length; i++){
+            if(stack.isEmpty()) {
+                stack.push(arr[i]);
                 continue;
             }
             
-            if(stack.peek() != x){
-                stack.push(x);
-            }
+            if(stack.peek() != arr[i]) stack.push(arr[i]);
+            
         }
-
+        
         int[] answer = new int[stack.size()];
+        
         
         for(int i=0; i<stack.size(); i++){
             answer[i] = stack.get(i);
         }
-        
         return answer;
     }
 }
