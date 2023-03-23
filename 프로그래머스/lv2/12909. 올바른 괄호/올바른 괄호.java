@@ -10,10 +10,12 @@ class Solution {
             else{
                 if(!stack.isEmpty()) stack.pop();
                 else stack.push(c);
-            }    
+            }
         }
+
+        // System.out.println(stack);
         
-        answer = stack.isEmpty() ? true : false;
+        answer = stack.size() == 0 ? true : false;
         return answer;
     }
 }
