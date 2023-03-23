@@ -6,18 +6,16 @@ class Solution {
             result[i] = String.valueOf(numbers[i]);
         }
         
-        // System.out.println(result);
-        
         Arrays.sort(result, new Comparator<String>(){
-           @Override
+            @Override
             public int compare(String o1, String o2){
-                return (o2+o1).compareTo(o1+o2);
+                return ((o2 + o1).compareTo(o1+o2));
             }
         });
         
-        if(result[0].equals("0")) return "0";
-        
         String answer = "";
+        
+        if(result[0].equals("0")) return "0";
         
         for(String str : result){
             answer += str;
