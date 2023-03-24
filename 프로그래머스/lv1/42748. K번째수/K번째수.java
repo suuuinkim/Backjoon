@@ -4,11 +4,11 @@ class Solution {
         int[] answer = new int[commands.length];
         
         for(int i=0; i<commands.length; i++){
-            int[] tmp = Arrays.copyOfRange(array, commands[i][0]-1, commands[i][1]);
-            Arrays.sort(tmp);
-            // System.out.println(commands[i][0]-1);
-            answer[i] = tmp[commands[i][2]-1];
+            int[] arr = Arrays.copyOfRange(array, commands[i][0] -1, commands[i][1]);
+            Arrays.sort(arr);
+            answer[i] = arr[commands[i][2] - 1];
         }
+        
         return answer;
     }
 }
