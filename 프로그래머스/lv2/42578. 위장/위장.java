@@ -8,10 +8,10 @@ class Solution {
             map.put(clothes[i][1], map.getOrDefault(clothes[i][1], 1) + 1);
         }
         
-        
+        // System.out.println(map);
         int sum = 1;
+        
         for(int x : map.values()){
-            // System.out.println(x);
             sum *= x;
         }
         
